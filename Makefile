@@ -32,8 +32,8 @@ SOURCES		:=	source
 DATA		:=	data
 INCLUDES	:=	include
 APP_TITLE	:=	2048 3D
-APP_DESCRIPTION	:=	A "Port" of the popular 2048 game!!!
-APP_AUTHOR	:=	Jasper Peters (MrJPGames)
+APP_DESCRIPTION	:=	2048 for the 3DS
+APP_AUTHOR	:=	Jasper Peters
 
 #---------------------------------------------------------------------------------
 # options for code generation
@@ -44,7 +44,7 @@ CFLAGS	:=	-g -Wall -O2 -mword-relocations \
 			-fomit-frame-pointer -ffast-math \
 			$(ARCH)
 
-CFLAGS	+=	$(INCLUDE) -DARM11 -D_3DS 
+CFLAGS	+=	$(INCLUDE) -DARM11 -D_3DS
 
 CXXFLAGS	:= $(CFLAGS) -fno-rtti -fno-exceptions -std=gnu++11
 

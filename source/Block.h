@@ -1,20 +1,20 @@
 #ifndef Block_H
 #define Block_H
 
-class Block{
+class Block {
 	public:
-		Block(); //Make new block without vars!
-		Block(int val, bool hasMerged); //Make new Block!
-		void editBlock(int val, bool hasMerged); //edit block
-		void editBlock(int val, bool hasMerged, int val2); //edit block with transparancy
-		int getVal(); //get location ID
-		bool getHasMerged(); //get merged?
+		Block();  // Make new block without vars
+		Block(int value, bool merged);  // Make new block
+		void editBlock(int value, bool merged);  // Edit block
+		void editBlock(int value, bool merged, int alpha);  // Edit block with transparancy
+		int getVal();  // Get location ID
+		bool getHasMerged();  // Get merged?
 		int getTransparancy();
-		void setTransparancy(int trans);
+		void setTransparancy(int alpha);
 	private:
-		int val; //Number of Block
-		bool hasMerged; //Has it merged during move?
-		int transparancy;
+		int bV;  // Number of Block
+		bool bMerged;  // Has it merged during move?
+		int bAlpha;  // Transparancy
 };
 
 #endif

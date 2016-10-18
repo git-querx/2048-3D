@@ -1,36 +1,29 @@
 #include "Block.h"
 
-
-Block::Block(){
-	val = 0;
-	hasMerged = false;
-	transparancy=0;
+Block::Block() {
+	bV = 0;
+	bMerged = false;
+	bAlpha = 0;
 }
 
-Block::Block(int var2, bool var3){
-	editBlock(var2, var3);
+Block::Block(int value, bool merged) {
+	editBlock(value, merged);
 }
 
-void Block::editBlock(int var2, bool var3){
-	val = var2;
-	hasMerged = var3;
+void Block::editBlock(int value, bool merged) {
+	bV = value;
+	bMerged = merged;
 }
 
-void Block::editBlock(int var2, bool var3, int var1){
-	val = var2;
-	hasMerged = var3;
-	transparancy=var1;
+void Block::editBlock(int value, bool merged, int alpha) {
+	editBlock(value, merged);
+	setTransparancy(alpha);
 }
 
-int Block::getVal(){
-	return val;
-}
-bool Block::getHasMerged(){
-	return hasMerged;
-}
-int Block::getTransparancy(){
-	return transparancy;
-}
-void Block::setTransparancy(int trans){
-	transparancy=trans;
+int Block::getVal() { return bV; }
+bool Block::getHasMerged() { return bMerged; }
+int Block::getTransparancy() { return bAlpha; }
+
+void Block::setTransparancy(int alpha) {
+	bAlpha = alpha;
 }
